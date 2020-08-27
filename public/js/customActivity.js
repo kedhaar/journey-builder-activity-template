@@ -8,11 +8,11 @@
    
     function initialize(data)
     {
-        document.getElementById('configuration').value = JSON.stringify(data,null,2);
+        document.getElementById('congress').value = JSON.stringify(data,null,2);
     }
         
     function save()
     {
-        var configuration = JSON.parse(document.getElementById('configuration').value);
+        var configuration = JSON.parse(document.getElementById('congress').value);
         connection.trigger('updateActivity',configuration);
     }
