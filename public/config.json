@@ -5,7 +5,58 @@
         "iconSmall": "images/iconSmall.png",
         "category": "message"
     },
-    "type": "HTTP",
+    "type": "REST",
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                  "winID": "{{Contact.Attribute.JourneyEntrySource.ContactKey}}" 
+                }               
+            ],
+            "outArguments": [],
+            "url": "https://ar-game-poc.herokuapp.com/journeybuilder/execute",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
+       "save": {
+           "url": "https://ar-game-poc.herokuapp.com/save",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+       "publish": {
+           "url": "https://ar-game-poc.herokuapp.com/publish",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+       "validate": {
+           "url": "https://ar-game-poc.herokuapp.com/validate",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+       "stop": {
+           "url": "https://ar-game-poc.herokuapp.com/stop",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       }
+    },
     "userInterfaces": {
         "configModal": {
             "height": 400,
